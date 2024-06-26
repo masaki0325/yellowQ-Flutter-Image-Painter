@@ -624,16 +624,16 @@ class ImagePainterState extends State<ImagePainter> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 IconButton(
-                  tooltip: textDelegate.undo,
-                  icon: widget.undoIcon ??
-                      Icon(Icons.reply, color: Colors.grey[700]),
-                  onPressed: () => _controller.undo(),
-                ),
-                IconButton(
                   tooltip: textDelegate.clearAllProgress,
                   icon: widget.clearAllIcon ??
                       Icon(Icons.clear, color: Colors.grey[700]),
                   onPressed: () => _controller.clear(),
+                ),
+                IconButton(
+                  tooltip: textDelegate.undo,
+                  icon: widget.undoIcon ??
+                      Icon(Icons.reply, color: Colors.grey[700]),
+                  onPressed: () => _controller.undo(),
                 ),
               ],
             ),
