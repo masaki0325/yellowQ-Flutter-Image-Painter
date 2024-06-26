@@ -626,13 +626,13 @@ class ImagePainterState extends State<ImagePainter> {
                 IconButton(
                   tooltip: textDelegate.clearAllProgress,
                   icon: widget.clearAllIcon ??
-                      Icon(Icons.clear, color: Colors.grey[700]),
+                      Icon(Icons.clear, color: Colors.blue[700]),
                   onPressed: () => _controller.clear(),
                 ),
                 IconButton(
                   tooltip: textDelegate.undo,
                   icon: widget.undoIcon ??
-                      Icon(Icons.reply, color: Colors.grey[700]),
+                      Icon(Icons.reply, color: Colors.yellow[700]),
                   onPressed: () => _controller.undo(),
                 ),
               ],
@@ -904,20 +904,20 @@ class ImagePainterState extends State<ImagePainter> {
           ),
           const Spacer(),
           IconButton(
-            tooltip: textDelegate.undo,
-            icon: widget.undoIcon ?? Icon(Icons.reply, color: Colors.grey[700]),
-            onPressed: () {
-              widget.onUndo?.call();
-              _controller.undo();
-            },
-          ),
-          IconButton(
             tooltip: textDelegate.clearAllProgress,
             icon: widget.clearAllIcon ??
-                Icon(Icons.clear, color: Colors.grey[700]),
+                Icon(Icons.clear, color: Colors.blue[700]),
             onPressed: () {
               widget.onClear?.call();
               _controller.clear();
+            },
+          ),
+          IconButton(
+            tooltip: textDelegate.undo,
+            icon: widget.undoIcon ?? Icon(Icons.reply, color: Colors.blue[700]),
+            onPressed: () {
+              widget.onUndo?.call();
+              _controller.undo();
             },
           ),
         ],
